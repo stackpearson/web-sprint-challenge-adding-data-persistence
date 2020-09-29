@@ -21,7 +21,7 @@ function addResource(resource) {
 function getTasks(id) {
     return db('tasks as t')
         .join('projects as p', 'p.id', 't.associated_project')
-        .select('t.task_name', 'p.project_name')
+        .select('t.task_name', 'p.project_name', 'p.project_description')
         .where({associated_project:id})
 }
 
