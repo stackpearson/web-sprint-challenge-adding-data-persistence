@@ -21,7 +21,7 @@ A `project` is what needs to be done. We want to store the following data about 
 -   [ ] a unique ID.
 -   [ ] a name. This column is required.
 -   [ ] a description.
--   [ ] a boolean that indicates if the project has been completed. This column is required, the default value should be `false`.
+-   [ ] a boolean that indicates if the project has been completed. This column is required, the default value should be `false`. tbl.boolean('project_completed').defaultTo(false);
 
 A `resource` is anything needed to complete a project, some examples are: a person, a tool, a meeting room or a software license. We want to store the following data about a `resource`:
 
@@ -47,12 +47,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. Explain the difference between `Relational Databases` and `SQL`.
+    Relational databases is where your data is stored, SQL is how you query the database and access & maniuplate your stored information.
 
 2. Why do tables need a `primary key`?
+    A primary key is required to access specific rows for insertion, deletion or modification.
 
 3. What is the name given to a table column that references the primary key on another table.
+    A foreign key
 
 4. What do we need in order to have a _many to many_ relationship between two tables.
+    A situation in which either table is accessed by multiple resources. In order to link the two, an intermediary table is required where the foreign keys reference the primary key on the table you're trying to relate to.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -82,12 +86,12 @@ Your finished project must include all of the following requirements:
     -   [ ] when adding a `task` the client must provide the `id` of an existing project.
     -   [ ] for `projects` and `tasks` if no value is provided for the `completed` property, the API should provide a default value of `false`.
 -   [ ] Build an API with endpoints for:
-    -   [ ] adding resources.
-    -   [ ] retrieving a list of resources.
-    -   [ ] adding projects.
-    -   [ ] retrieving a list of projects.
-    -   [ ] adding tasks.
-    -   [ ] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
+    -   [x] adding resources.
+    -   [x] retrieving a list of resources.
+    -   [x] adding projects.
+    -   [x] retrieving a list of projects.
+    -   [x] adding tasks.
+    -   [x] retrieving a list of tasks. **The list of tasks should include the project name and project description**.
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 
